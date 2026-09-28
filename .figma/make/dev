@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+./scripts/start-preview-backend.sh &
+BACKEND_SUPERVISOR_PID=$!
+
+cleanup() {
+  kill "$BACKEND_SUPERVISOR_PID" >/dev/null 2>&1 || true
+  wait "$BACKEND_SUPERVISOR_PID" >/dev/null 2>&1 || true
+}
+trap cleanup EXIT INT TERM
+
+pnpm run dev

@@ -1,0 +1,10 @@
+{
+  "description": "Streamline incident investigations for DevOps teams with AI-driven insights and persistent memory, enhancing resolution speed and team learning.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
